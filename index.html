@@ -14,12 +14,19 @@
     </h3>
     <p><strong>Refactoring in progress:</strong> Trying to emulate LCARS</p>
     <p><a href="https://www.thelcars.com/colors.php">link text</a></p>
-    <p><img id="bottom-img" onclick="changeImage()" src="https://robert0x43.github.io/images/smirk.gif" height=100 alt="Rob" /></p>
-    <p>version script added</p>
+    <p><img id="bottom-img" onclick="changeImage()" src="https://robert0x43.github.io/images/smirk.gif" height=100 alt="bottom image" /></p>
+    <p><img id="emh" onclick="deactivateEMH()" src="https://robert0x43.github.io/images/yes-emh.png" height=100 alt="EMH" /></p>
+    <p>version deactivate emh</p>
 
     <script>
         function changeImage() {
             document.getElementById("bottom-img").src = "https://robert0x43.github.io/images/emh-told-you-so.gif";
+        }
+    </script>
+    <script>
+        function deactivateEMH() {
+            document.getElementById("emh").src = "https://robert0x43.github.io/images/bye-emh.gif";
+            setTimeout(function(){ document.getElementById("emh").src="https://robert0x43.github.io/images/no-emh.png"; }, 1000);
         }
     </script>
 
