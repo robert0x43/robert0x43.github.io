@@ -15,8 +15,8 @@
     <p><strong>Refactoring in progress:</strong> Trying to emulate LCARS</p>
     <p><a href="https://www.thelcars.com/colors.php">The LCARS site.</a></p>
     <!-- <p><img id="bottom-img" onclick="changeImage()" src="https://robert0x43.github.io/images/smirk.gif" height=100 alt="bottom image" /></p> -->
-    <p><img id="emh" onclick="deactivateEMH()" src="https://robert0x43.github.io/images/yes-emh.png" alt="EMH" /></p>
-    <p>version changed link text</p>
+    <p><img id="emh-1" onclick="toggleEMH()" src="https://robert0x43.github.io/images/yes-emh.png" alt="EMH" /></p>
+    <p>version added reactivate emh</p>
 
     <!-- <script>
         function changeImage() {
@@ -24,9 +24,17 @@
         }
     </script> -->
     <script>
-        function deactivateEMH() {
-            document.getElementById("emh").src = "https://robert0x43.github.io/images/bye-emh.gif";
-            setTimeout(function(){ document.getElementById("emh").src="https://robert0x43.github.io/images/no-emh.png"; }, 9750);
+        function toggleEMH() {
+            if(document.getElementById("emh").id == "emh-1") {
+                document.getElementById("emh").src = "https://robert0x43.github.io/images/bye-emh.gif";
+                setTimeout(function(){ document.getElementById("emh").src="https://robert0x43.github.io/images/no-emh.png"; }, 9750);
+                document.getElementById("emh").id = "emh-0"
+            } else {
+                document.getElementById("emh").src = "https://robert0x43.github.io/images/hi-emh.gif";
+                setTimeout(function(){ document.getElementById("emh").src="https://robert0x43.github.io/images/yes-emh.png"; }, 9750);
+                document.getElementById("emh").id = "emh-0"
+            }
+            
         }
     </script>
 
