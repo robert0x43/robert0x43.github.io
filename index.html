@@ -1,52 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>robert0x43 github pages</title>
-    <link rel="icon" href="https://robert0x43.github.io/favicon.ico" type="image/x-icon" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<title>LCARS Website HTML Template</title>
+<meta name="description" content="Star Trek LCARS Website HTML CSS Template">
+<meta name="keywords" content="LCARS, Website, Template, HTML, CSS, Star Trek">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="date=no">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="icon" type="image/png" href="https://d700mbxo45lbr.cloudfront.net/lcars/thelcars.png">
 </head>
-<body style="background-color:black; color:#cc77ff">
-
-    <h3>
-        <img style="border-radius:50%" src="https://robert0x43.github.io/images/spank-apeach.gif" width=30 height=30 alt="rob avatar" />
-        <span style="background-color: #ffbbaa; color:black; padding: 0 3px;">Robsite</span>
-        <span style="background-color: #ff7700;  color:black; padding: 0 3px;">Home</span>
-    </h3>
-    <p><strong>Refactoring in progress:</strong> Trying to emulate LCARS</p>
-    <p><a href="https://www.thelcars.com/colors.php">The LCARS site.</a></p>
-    <!-- <p><img id="bottom-img" onclick="changeImage()" src="https://robert0x43.github.io/images/smirk.gif" height=100 alt="bottom image" /></p> -->
-    <p><img id="emh" onclick="toggleEMH()" src="https://robert0x43.github.io/images/yes-emh.png" alt="emh-1" /></p>
-    <p>version ball broke emh</p>
-
-    <!-- <p><img id="ball" style="position:absolute; left:400px; top:100px;" onclick="bounce()" src="https://robert0x43.github.io/images/waterpolo-ball.png" height=50 alt="0" /></p> -->
-
-    <!-- <script>
-        function changeImage() {
-            document.getElementById("bottom-img").src = "https://robert0x43.github.io/images/emh-told-you-so.gif";
-        }
-    </script> -->
-    <script>
-        function toggleEMH() {
-            if(document.getElementById("emh").alt == "emh-1") {
-                document.getElementById("emh").src = "https://robert0x43.github.io/images/bye-emh.gif";
-                setTimeout(function(){ document.getElementById("emh").src="https://robert0x43.github.io/images/no-emh.png"; }, 975);
-                document.getElementById("emh").alt = "emh-0";
-            } else {
-                document.getElementById("emh").src = "https://robert0x43.github.io/images/hi-emh.gif";
-                setTimeout(function(){ document.getElementById("emh").src="https://robert0x43.github.io/images/yes-emh.png"; }, 975);
-                document.getElementById("emh").alt = "emh-1";
-            }
-            
-        }
-    </script>
-    <!-- <script>
-        function bounce() {
-            v = document.getElementById("ball").alt
-            while(true) {
-
-            }
-        }
-    </script> -->
-
+<body>
+<div class="wrap">
+	<div class="scroll-top">
+		<a id="scroll-top" href=""><span class="hop">screen</span> top</a>
+	</div>
+	<div class="left-frame-top">
+		<div class="panel-1"><a href="https://www.thelcars.com"><span class="hop">The</span>LCARS<span class="hop">.com</span></a></div>
+		<div class="panel-2">02<span class="hop">-262000</span></div>
+	</div>
+	<div class="right-frame-top">
+		<div class="banner">
+			LCARS / Home &#149; 55188.73</div>
+					<div class="data-cascade-button-group">
+				<div class="cascade-wrapper">
+					<div class="data-cascade">
+						<div class="row-1"><div class="dc1">101</div><div class="dc2">7109</div><div class="dc3">1966</div><div class="dc4">1222</div><div class="dc5">2020</div><div class="dc6">1444</div><div class="dc7">102</div><div class="dc8">1103</div><div class="dc9">1935</div><div class="dc10">1940</div><div class="dc11">708</div><div class="dc12">M113</div><div class="dc13">1956</div><div class="dc14">1209</div></div><div class="row-2"><div class="dc1">102</div><div class="dc2">8102</div><div class="dc3">1987</div><div class="dc4">044</div><div class="dc5">0051</div><div class="dc6">607</div><div class="dc7">1976</div><div class="dc8">1031</div><div class="dc9">1984</div><div class="dc10">1954</div><div class="dc11">1103</div><div class="dc12">415</div><div class="dc13">1045</div><div class="dc14">1864</div></div><div class="row-3"><div class="dc1">103</div><div class="dc2">714</div><div class="dc3">1993</div><div class="dc4">0222</div><div class="dc5">052</div><div class="dc6">1968</div><div class="dc7">2450</div><div class="dc8">746</div><div class="dc9">56</div><div class="dc10">47</div><div class="dc11">716</div><div class="dc12">8719</div><div class="dc13">417</div><div class="dc14">602</div></div><div class="row-4"><div class="dc1">104</div><div class="dc2">6104</div><div class="dc3">1995</div><div class="dc4">322</div><div class="dc5">90</div><div class="dc6">1931</div><div class="dc7">1701</div><div class="dc8">51</div><div class="dc9">29</div><div class="dc10">218</div><div class="dc11">908</div><div class="dc12">2114</div><div class="dc13">85</div><div class="dc14">3504</div></div><div class="row-5"><div class="dc1">105</div><div class="dc2">08</div><div class="dc3">2001</div><div class="dc4">713</div><div class="dc5">079</div><div class="dc6">1940</div><div class="dc7">LV</div><div class="dc8">426</div><div class="dc9">105</div><div class="dc10">10</div><div class="dc11">1206</div><div class="dc12">1979</div><div class="dc13">402</div><div class="dc14">795</div></div><div class="row-6"><div class="dc1">106</div><div class="dc2">31</div><div class="dc3">2017</div><div class="dc4">429</div><div class="dc5">65</div><div class="dc6">871</div><div class="dc7">1031</div><div class="dc8">541</div><div class="dc9">656</div><div class="dc10">764</div><div class="dc11">88</div><div class="dc12">001</div><div class="dc13">27</div><div class="dc14">05</div></div>
+					</div> 
+				</div> <!-- /cascade-wrapper -->
+				<div class="button-col">
+					<div class="button" id="top-left"><a href="https://www.thelcars.com" class="blink-slower">home</a></div>
+					<div class="button" id="bottom-left"><a href="https://www.thelcars.com/menu/">menu</a></div>
+				</div>
+				<div class="button-col">
+					<div class="button" id="top-right"><a href="https://www.thelcars.com/logs/">news</a></div>
+					<div class="button" id="bottom-right"><a href="https://www.thelcars.com/comm/">contact</a></div>
+				</div>
+			</div> <!-- /data-cascade-button-group -->
+		<div class="top-corner-bg">
+			<div class="top-corner"></div>
+		</div>
+		<div class="bar-panel">
+		<div class="bar-1"></div>
+		<div class="bar-2"></div>
+		<div class="bar-3"></div>
+		<div class="bar-4"></div>
+		<div class="bar-5"></div>
+		</div>
+	</div> <!-- /left-frame-top -->
+</div> <!-- /wrap -->
+<div class="wrap" id="gap">
+	<div class="left-frame">
+		<div>
+			<div class="panel-3">03<span class="hop">-111968</span></div>
+			<div class="panel-4">04<span class="hop">-041969</span></div>
+			<div class="panel-5">05<span class="hop">-1701D</span></div>
+			<div class="panel-6">06<span class="hop">-071984</span></div>
+			<div class="panel-7">07<span class="hop">-081940</span></div>
+			<div class="panel-8">08<span class="hop">-47148</span></div>
+			<div class="panel-9">09<span class="hop">-081966</span></div>
+		</div>
+		<div>
+			<div class="panel-10">10<span class="hop">-31</span></div>
+		</div>
+	</div>
+	<div class="right-frame">
+		<div class="bar-panel">
+		<div class="bar-6"></div>
+		<div class="bar-7"></div>
+		<div class="bar-8"></div>
+		<div class="bar-9"></div>
+		<div class="bar-10"></div>
+		</div>
+		<div class="corner-bg">
+			<div class="corner"></div>
+		</div>
+		<div class="content">
+<h1>LCARS Website HTML Template</h1>
+<p>The LCARS Inspired Website Template is strictly HTML and CSS without graphics. This makes it lightweight and fast. The design is responsive, which means that it will adapt its layout to fit the varying screen sizes of most devices. Anyone familiar with HTML and CSS can use this template. All you need is your favorite text editor and web hosting.</p>
+<div class="flexbox">
+	<div class="col">
+		<h2>What is 'LCARS'?</h2>
+		<p>LCARS (pronounced elkarz) is an acronym for Library Computer Access/Retrieval System, and was the fictional computer operating system on many Star Trek incarnations post The Original Series. The LCARS graphical interface was designed by scenic art supervisor Michael Okuda and first appeared in Star Trek: The Next Generation.</p>
+		<img class="pics border" src="https://d700mbxo45lbr.cloudfront.net/lcars/odn/lcars-voyager-2.jpg" width="505" height="380">
+		<p class="caption">A holographic recreation of Dr. Lewis Zimmerman (Robert Picardo) studies a LCARS display.<br>
+		Star Trek: Voyager "The Swarm"</p>	
+	</div>
+	<div class="col">
+		<img class="pics border" src="https://d700mbxo45lbr.cloudfront.net/lcars/odn/lcars-voyager-4.jpg" width="524" height="389">
+		<p class="caption">Commander Chakotay (Robert Beltran) works with a LCARS interface.<br>
+		Star Trek: Voyager "The Swarm"</p>
+		<hr class="disc">
+		<h2 class="go-center">News & Updates</h2>
+		<p class="go-center">Access the LCARS logs for news and updates.</p>
+		<div class="buttons jc-center">
+			<a href="/logs/" class="magenta">Logs</a>
+		</div>
+	</div>
+</div>			
+<footer>
+	<div class="footer-inside">
+		<div class="footer-text">
+			<p><a href="https://www.thelcars.com">TheLCARS.com</a> and the LCARS Inspired Website Template designed &amp; developed by <span class="now">Jim Robertus.</span><br>
+			Copyright &#169; 2020-2022</p>
+			<p>STAR TREK &#174; and its various marks are trademarks of CBS Studios Inc. TheLCARS.com is not affiliated with, endorsed by, or sponsored by CBS Studios Inc. The LCARS graphical user interface was designed by STAR TREK: THE NEXT GENERATION scenic art supervisor Michael Okuda.</p>
+		</div>
+	</div>
+	<div class="footer-panel">
+		<span class="hop">22</span>47
+	</div>
+</footer>
+<script type="text/javascript" src="https://d700mbxo45lbr.cloudfront.net/lcars/lcars.js"></script>
+			
+		</div> <!-- /content -->
+	</div> <!-- /right-frame -->
+</div> <!-- /wrap -->
 </body>
 </html>
