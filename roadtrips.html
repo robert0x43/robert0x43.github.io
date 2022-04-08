@@ -61,7 +61,7 @@
                 <div class="sidebar-buttons">
                     <a href="personnel.html" class="almond">personnel</a>
                     <a href="music/concerts.html" class="bluey">music</a>
-                    <a href="roadtrips.html" class="sunflower">trips</a>
+                    <a href="roadtrips.html" class="space-white">trips</a>
                     <a href="games.html" class="violet-creme">games</a>
                     <a href="404" class="african-violet"></a>
                 </div>
@@ -87,16 +87,30 @@
 		<div class="corner-bg">
 			<div class="corner"></div>
 		</div>
-		<div class="content">
-<div class="lcars-text-bar the-end">
-    <span class="go-gold">LCARS computer access &#149; online</span>
+<div class="content">
+<div class="buttons">
+	<a class="two-rows">
+		<label for="trip">Select a Trip:</label>
+	<br>
+		<select name="trip" id="trip">
+			<option value="arizona">Arizona</option>
+			<option value="colorado">Colorado</option>
+			<option value="montana">Montana</option>
+			<option value="oregon">Oregon</option>
+			<option value="washington">Washington</option>
+		</select>
+	</a>
 </div>
-<img src="images/starfleet-logo.png" class="pics">
-<h1 class="go-center go-gold">the lcars computer network</h1>
-<h2 class="go-center go-bluey">authorized access only</h2>
-<div class="lcars-text-bar">
-    <span class="go-gold">console 67</span>
-  </div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m58!1m12!1m3!1d6101596.034926216!2d-127.1993173610071!3d41.692568249301424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m43!3e0!4m5!1s0x80857dd3466ae741%3A0x1d00977736d9131b!2s2415%20Oregon%20St%2C%20Berkeley%2C%20CA%2094705!3m2!1d37.8588643!2d-122.25854269999999!4m5!1s0x54bffefcbc4b9c63%3A0xf93429e08f0357c2!2sSalem%2C%20OR!3m2!1d44.9428975!2d-123.03509629999999!4m5!1s0x54950b0b7da97427%3A0x1c36b9e6f6d18591!2sPortland%2C%20OR!3m2!1d45.515232!2d-122.67838529999999!4m5!1s0x54b8c0ffa5d3d251%3A0x1088e7acc720d1b4!2sBend%2C%20OR!3m2!1d44.0581728!2d-121.31530959999999!4m5!1s0x54c6170840e5e339%3A0x902bf2e1452fe3a3!2sCrater%20Lake%20National%20Park!3m2!1d42.8971722!2d-122.13374449999999!4m5!1s0x54c49b0942eede61%3A0xea92e84253429f02!2sBandon%2C%20OR!3m2!1d43.118997799999995!2d-124.40844799999999!4m5!1s0x80857dd3466ae741%3A0x1d00977736d9131b!2s2415%20Oregon%20Street%2C%20Berkeley%2C%20CA!3m2!1d37.8588643!2d-122.25854269999999!5e0!3m2!1sen!2sus!4v1649137963405!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<button onClick="newSrc();">Change Iframe Src</button>
+
+<iframe src="index.html" style="width:450px;height:450px;overflow:scroll;" id="MyFrame"></iframe>
+<select id="MySelectMenu" onSelect="newSrc();">
+  <option value="games.html">Beamtic</option>
+  <option value="index.html" onClick="newSrc();">Wiki</option>
+</select>
+
 <footer>
 	<div class="footer-inside">
 		<div class="footer-text">
@@ -114,4 +128,12 @@
 	</div> <!-- /right-frame -->
 </div> <!-- /wrap -->
 </body>
+
+<script>
+	function newSrc() {
+	var e = document.getElementById("MySelectMenu");
+	var newSrc = e.options[e.selectedIndex].value;
+	document.getElementById("MyFrame").src=newSrc;
+}
+</script>
 </html>
