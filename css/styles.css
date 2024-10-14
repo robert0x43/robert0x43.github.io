@@ -68,6 +68,8 @@ h1 {
     width: 100%; /* Full width container */
     max-width: 500px; /* Optional: Set a max-width */
     margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add padding to the left and right */
+    box-sizing: border-box; /* Ensure padding is included in the element’s width */
   }
 
 /* Make the search bar flexible to adjust based on the button */
