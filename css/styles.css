@@ -1,12 +1,37 @@
+/*
+name	hex	rgba	colorname
+red	#ED001C	RGBA(237, 0, 28, 1)	Cadmium Red
+orangered	#FF4300	RGBA(255, 67, 0, 1)	Orange Red
+orange	#FF8700	RGBA(255, 135, 0, 1)	Dark Orange
+mango	#FFB100	RGBA(255, 177, 0, 1)	UCLA Gold
+lime	#92E234	RGBA(146, 226, 52, 1)	Atlantis
+green	#3BCB56	RGBA(61, 211, 90, 1)	UFO Green
+mint	#00D4BB	RGBA(0, 212, 187, 1)	Robin Egg Blue
+teal	#13B89F	RGBA(19, 184, 159, 1)	Light Sea Green
+blue	#149EF0	RGBA(20, 158, 240, 1)	Dodger Blue
+alien blue	#0077D6	RGBA(0, 119, 214, 1)	True Blue
+pink	#FF63AC	RGBA(255, 99, 172, 1)	Magenta
+purple	#7F4FC4	RGBA(127, 79, 196, 1)	Fuchsia Blue
+gold	#DEBE22	RGBA(222, 190, 34, 1)	Sunflower
+brown	#A16A3E	RGBA(161, 106, 62, 1)	Cape Palliser
+pale grey	#EFEFED	RGBA(239, 239, 237, 1)	White
+grey	#A5A4A4	RGBA(165, 164, 164, 1)	Gray Chateau
+dark grey	#545452	RGBA(84, 84, 82, 1)	Dark Gray
+semi black	#222222	RGBA(34, 34, 34, 1)	Black
+*/
+
 :root {
-    --primary-bg-color: #f5f5f5; /* Light mode background color */
-    --primary-text-color: #333;  /* Light mode text color */
-    --secondary-bg-color: #333;   /* Dark mode background color */
+    --primary-bg-color: #EFEFED; /* Light mode background color */
+    --primary-alt-bg-color: #A5A4A4;
+    --primary-text-color: #222222;  /* Light mode text color */
+
+    --secondary-bg-color: #222222;   /* Dark mode background color */
+    --secondary-alt-bg-color: #545452;
     --secondary-text-color: #f5f5f5; /* Dark mode text color */
+
     --header-color: #ff5700;        /* Header color */
-    --toggle-bg-color: #ddd;       /* Toggle background color */
-    --toggle-active-bg-color: #333; /* Active toggle background color */
-    --toggle-handle-color: white;  /* Toggle handle color */
+    --light-search-color: #f8f8f6;
+    --dark-search-color: #2a2a2a;
   }
 
 /* Basic reset and styling */
@@ -39,15 +64,20 @@ h1 {
     padding: 10px;
     font-size: 18px;
     width: 300px;
-    border: 1px solid #ccc;
+    border: 0px;
     border-radius:4px;
+    background-color: var(--light-search-color);
 }
 
 .search-button {
     padding: 10px 20px;
     font-size: 18px;
     margin-top: 10px;
+    border: 0px;
+    border-radius:4px;
     cursor: pointer;
+    background-color: var(--primary-alt-bg-color);
+    color: var(--primary-text-color);
 }
 
 /* Toggle Switch Styles */
@@ -61,7 +91,7 @@ h1 {
     display: inline-block;
     width: 60px;
     height: 30px;
-    background-color: #A5A4A4;
+    background-color: var(--primary-alt-bg-color);
     border-radius: 30px;
     position: relative;
     cursor: pointer;
@@ -72,7 +102,7 @@ h1 {
     content: '';
     width: 26px;
     height: 26px;
-    background-color: #EFEFED;
+    background-color: var(--primary-bg-color);
     border-radius: 50%;
     position: absolute;
     top: 2px;
@@ -82,7 +112,7 @@ h1 {
 
 /* Dark mode activated */
 input[type="checkbox"]:checked + .toggle-label {
-    background-color: #A5A4A4;
+    background-color: var(--secondary-alt-bg-color);
 }
 
 input[type="checkbox"]:checked + .toggle-label::after {
@@ -96,11 +126,22 @@ input[type="checkbox"]:checked + .toggle-label::after {
 
 /* Light and dark mode styles */
 body.light-mode {
-    background-color: #EFEFED;
-    color: #545452;
+    background-color: var(--primary-bg-color);
+    color: var(--secondary-bg-color);
 }
 
 body.dark-mode {
-    background-color: #545452;
-    color: #EFEFED;
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-bg-color);
 }
+
+/* Dark mode search bar */
+body.dark-mode .search-bar {
+    background-color: var(--dark-search-color);
+  }
+  
+  /* Dark mode search button */
+  body.dark-mode .search-button {
+    background-color: var(--secondary-alt-bg-color);
+    color: var(--secondary-text-color);
+  }
