@@ -55,29 +55,43 @@ body {
 }
 
 h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 64px;
+    margin-bottom: 10px;
     color: var(--header-color); /* Header color */
 }
 
+/* Flex container for the search input and button */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Full width container */
+    max-width: 500px; /* Optional: Set a max-width */
+    margin: 0 auto; /* Center the container */
+  }
+
+/* Make the search bar flexible to adjust based on the button */
 .search-bar {
+    flex: 1; /* Allows the input to grow and shrink as needed */
     padding: 10px;
     font-size: 18px;
     width: 300px;
     border: 0px;
     border-radius:4px;
     background-color: var(--light-search-color);
+    margin-right: 10px; /* Space between search input and button */
+    min-width: 150px; /* Optional: Set a minimum width for the input */
 }
 
 .search-button {
-    padding: 10px 20px;
+    padding: 10px 15px;
     font-size: 18px;
-    margin-top: 10px;
     border: 0px;
-    border-radius:4px;
+    border-radius: 4px;
     cursor: pointer;
     background-color: var(--primary-alt-bg-color);
     color: var(--primary-text-color);
+    white-space: nowrap; /* Prevents text wrapping in the button */
 }
 
 /* Toggle Switch Styles */
