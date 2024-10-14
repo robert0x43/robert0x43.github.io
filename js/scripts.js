@@ -12,7 +12,7 @@ function toggleMode() {
   function searchGoogle() {
     const query = document.querySelector('.search-bar').value;
     if (query) {
-      window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query + ' reddit')}`;
+      window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query + ' site:reddit.com')}`;
     }
   }
   
