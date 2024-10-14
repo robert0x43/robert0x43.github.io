@@ -81,7 +81,7 @@ h1 {
     border-radius:4px;
     background-color: var(--light-search-color);
     margin-right: 10px; /* Space between search input and button */
-    min-width: 300px;
+    min-width: 250px;
 }
 
 .search-button {
