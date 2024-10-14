@@ -52,6 +52,7 @@ body {
 
 .container {
     text-align: center;
+    width:800px;
 }
 
 h1 {
@@ -66,7 +67,6 @@ h1 {
     align-items: center;
     justify-content: space-between;
     width: 100%; /* Full width container */
-    max-width: 800px; /* Optional: Set a max-width */
     margin: 0 auto; /* Center the container */
     padding: 0 25px; /* Add padding to the left and right */
     box-sizing: border-box; /* Ensure padding is included in the element’s width */
@@ -81,7 +81,7 @@ h1 {
     border-radius:4px;
     background-color: var(--light-search-color);
     margin-right: 10px; /* Space between search input and button */
-    min-width: 250px; /* Optional: Set a minimum width for the input */
+    min-width: 300px;
 }
 
 .search-button {
