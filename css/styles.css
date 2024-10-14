@@ -11,10 +11,10 @@
 
 /* Basic reset and styling */
 * {
+    font-family: 'Reddit Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Reddit Sans', sans-serif;
 }
 
 body {
