@@ -1,108 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>serchit</title>
-  <style>
-    /* Basic reset and styling */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    .container {
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-      color: #ff5700; /* Header color */
-    }
-
-    .search-bar {
-      padding: 10px;
-      font-size: 18px;
-      width: 300px;
-      border: 1px solid #ccc;
-      border-radius:4px;
-    }
-
-    .search-button {
-      padding: 10px 20px;
-      font-size: 18px;
-      margin-top: 10px;
-      cursor: pointer;
-    }
-
-    /* Toggle Switch Styles */
-    .toggle-wrapper {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-
-    .toggle-label {
-      display: inline-block;
-      width: 60px;
-      height: 30px;
-      background-color: #A5A4A4;
-      border-radius: 30px;
-      position: relative;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .toggle-label::after {
-      content: '';
-      width: 26px;
-      height: 26px;
-      background-color: #EFEFED;
-      border-radius: 50%;
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      transition: transform 0.3s;
-    }
-
-    /* Dark mode activated */
-    input[type="checkbox"]:checked + .toggle-label {
-      background-color: #A5A4A4;
-    }
-
-    input[type="checkbox"]:checked + .toggle-label::after {
-      transform: translateX(30px);
-    }
-
-    /* Hide the checkbox */
-    .toggle-input {
-      display: none;
-    }
-
-    /* Light and dark mode styles */
-    body.light-mode {
-      background-color: #EFEFED;
-      color: #545452;
-    }
-
-    body.dark-mode {
-      background-color: #545452;
-      color: #EFEFED;
-    }
-
-</style>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="css/styles.css"> <!-- Link to external CSS -->
 </head>
+
 <body class="light-mode">
   <div class="toggle-wrapper">
     <input type="checkbox" class="toggle-input" id="toggle-mode" onclick="toggleMode()">
@@ -111,36 +17,12 @@
 
   <div class="container">
     <h1>serchit</h1>
-    <input class="search-bar" type="text" placeholder="Search...">
-    <button class="search-button" onclick="searchGoogle()">Search</button>
+    <div><input class="search-bar" type="text" placeholder="Search...">
+      <button class="search-button" onclick="searchGoogle()">Search</button>
+    </div>
   </div>
 
-  <script>
-    function toggleMode() {
-      const body = document.body;
-      body.classList.toggle("dark-mode");
-
-      // Automatically set the body class based on the checkbox
-      if (body.classList.contains("dark-mode")) {
-        body.classList.remove("light-mode");
-      } else {
-        body.classList.add("light-mode");
-      }
-    }
-
-    function searchGoogle() {
-        const query = document.querySelector('.search-bar').value;
-        if (query) {
-            window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query + ' site:reddit.com')}`;
-        }
-    }
-
-    // Trigger search when Enter key is pressed
-    document.querySelector('.search-bar').addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-            searchGoogle();
-        }
-    });
-  </script>
+  <script src="js/scripts.js"></script> <!-- Link to external JS -->
 </body>
+
 </html>

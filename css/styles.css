@@ -1,0 +1,106 @@
+:root {
+    --primary-bg-color: #f5f5f5; /* Light mode background color */
+    --primary-text-color: #333;  /* Light mode text color */
+    --secondary-bg-color: #333;   /* Dark mode background color */
+    --secondary-text-color: #f5f5f5; /* Dark mode text color */
+    --header-color: orange;        /* Header color */
+    --toggle-bg-color: #ddd;       /* Toggle background color */
+    --toggle-active-bg-color: #333; /* Active toggle background color */
+    --toggle-handle-color: white;  /* Toggle handle color */
+  }
+
+/* Basic reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ff5700; /* Header color */
+}
+
+.search-bar {
+    padding: 10px;
+    font-size: 18px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius:4px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Toggle Switch Styles */
+.toggle-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.toggle-label {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: #A5A4A4;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-label::after {
+    content: '';
+    width: 26px;
+    height: 26px;
+    background-color: #EFEFED;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+/* Dark mode activated */
+input[type="checkbox"]:checked + .toggle-label {
+    background-color: #A5A4A4;
+}
+
+input[type="checkbox"]:checked + .toggle-label::after {
+    transform: translateX(30px);
+}
+
+/* Hide the checkbox */
+.toggle-input {
+    display: none;
+}
+
+/* Light and dark mode styles */
+body.light-mode {
+    background-color: #EFEFED;
+    color: #545452;
+}
+
+body.dark-mode {
+    background-color: #545452;
+    color: #EFEFED;
+}
