@@ -55,7 +55,7 @@ body {
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 100px;
     margin-bottom: 20px;
     color: var(--header-color); /* Header color */
 }
@@ -66,9 +66,9 @@ h1 {
     align-items: center;
     justify-content: space-between;
     width: 100%; /* Full width container */
-    max-width: 500px; /* Optional: Set a max-width */
+    max-width: 800px; /* Optional: Set a max-width */
     margin: 0 auto; /* Center the container */
-    padding: 0 20px; /* Add padding to the left and right */
+    padding: 0 25px; /* Add padding to the left and right */
     box-sizing: border-box; /* Ensure padding is included in the element’s width */
   }
 
@@ -77,12 +77,11 @@ h1 {
     flex: 1; /* Allows the input to grow and shrink as needed */
     padding: 10px;
     font-size: 18px;
-    width: 300px;
     border: 0px;
     border-radius:4px;
     background-color: var(--light-search-color);
     margin-right: 10px; /* Space between search input and button */
-    min-width: 150px; /* Optional: Set a minimum width for the input */
+    min-width: 250px; /* Optional: Set a minimum width for the input */
 }
 
 .search-button {
