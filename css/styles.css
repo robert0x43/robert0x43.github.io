@@ -104,33 +104,40 @@ h1 {
     justify-content: space-between;
     margin: 5px 26px; /* Center the container */
     box-sizing: border-box; /* Ensure padding is included in the element’s width */
-    overflow: hidden;
     min-width: 300px;
 }
 
 /* marquee Content */
 .rss-marquee {
-    flex: 1; /* Allows the input to grow and shrink as needed */
+    --gap: 1rem;
+    display: flex; /* Allows the input to grow and shrink as needed */
+    overflow: hidden;
+    user-select: none;
     height: 20px;
+    gap: var(--gap);
 }
 
 /* The actual ticker content that will scroll */
 .marquee-content {
-    display: inline-block;
+    flex-shrink: 0;
+    display: flex;
     white-space: nowrap; /* Prevent wrapping of text */
     font-size: 16px; /* Adjust font size as needed */
     animation: scroll-left 60s linear infinite; /* The scroll effect */
     animation-play-state: paused; /* Pause the animation initially */
     color: var(--primary-text-color);
+    gap: var(--gap);
+    justify-content: space-around;
+    min-width: 100%;
 }
 
 /* Scrolling Animation */
 @keyframes scroll-left {
-    0% {
-        transform: translateX(0%);
+    from {
+        transform: translateX(0);
     }
-    100% {
-        transform: translateX(-100%);
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
     }
 }
 
