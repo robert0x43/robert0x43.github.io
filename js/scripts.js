@@ -40,22 +40,31 @@ window.onload = function() {
   });
 
   const fetchRSS = async () => {
-    const rssURL = "https://rss2json.com/api.json?rss_url=https://www.reddit.com/r/popular/.rss"; // Replace with your RSS feed URL
+    const rssURL = "https://rss2json.com/api.json?rss_url=https://www.reddit.com/r/popular.rss"; // Replace with your RSS feed URL
     const marquee = document.getElementById("rss-marquee");
 
     try {
         const response = await fetch(rssURL);
-        const data = await response.json();
+        const data = await response.json(); // Get the JSON response
+        const items = data.items;
 
-        if (data && data.items) {
-            const items = data.items.map(item => `<span>${item.title}</span>`);
-            marquee.innerHTML = items.join(" | ");
+        if (items.length > 0) {
+            // Map through the items and create a string with the titles
+            let marqueeContent = "";
+            for (let i = 0; i < items.length; i++) {
+                const title = items[i].title;
+                marqueeContent += `<span>${title}</span> | `;
+            }
+
+            // Insert the content into both marquee-content elements
+            const marqueeContents = marquee.getElementsByClassName("marquee-content");
+            marqueeContents[0].innerHTML = marqueeContent;
+            marqueeContents[1].innerHTML = marqueeContent;
         } else {
-            marquee.innerHTML = "<span>No feed items available.</span>";
+            marquee.innerHTML = "<div class='marquee-content'>No feed items available.</div>";
         }
     } catch (error) {
         console.error("Error fetching RSS feed:", error);
-        marquee.innerHTML = "<span>Error loading feed.</span>";
     }
 };
 

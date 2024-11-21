@@ -113,8 +113,14 @@ h1 {
     min-width: 300px;
     height: 20px;
     white-space: nowrap; /* Prevent wrapping of text */
-    animation: scroll-left 10s linear infinite; /* Adjust speed as needed */
-    font-size: 16px; /* Adjust font size */
+}
+
+/* The actual ticker content that will scroll */
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap; /* Prevent wrapping of text */
+    font-size: 16px; /* Adjust font size as needed */
+    animation: scroll-left 45s linear infinite; /* The scroll effect */
     color: var(--primary-text-color);
 }
 
