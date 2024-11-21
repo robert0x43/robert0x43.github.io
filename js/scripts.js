@@ -19,8 +19,12 @@ function toggleMarquee() {
 
   if (toggle.checked) {
     marquee.style.visibility = 'visible';  // Show marquee
+    localStorage.setItem("marquee", "visible");
+    toggle.checked = true;
   } else {
     marquee.style.visibility = 'hidden';   // Hide marquee
+    localStorage.setItem("marquee", "hidden");
+    toggle.checked = false;
   }
 }
 
@@ -33,6 +37,13 @@ window.onload = function() {
       
       // Set the checkbox state based on the saved theme
       document.getElementById("toggle-mode").checked = (savedTheme === "dark");
+  }
+
+  const savedMarquee = localStorage.getItem("marquee");
+  if (savedMarquee) {
+      const marquee = document.querySelector('.rss-marquee');
+      marquee.style.visibility = savedMarquee;  // Show marquee
+      document.getElementById("toggle-marquee").checked = (savedMarquee === "visible");
   }
 };
   

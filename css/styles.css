@@ -159,6 +159,7 @@ h1 {
     display: flex;
     justify-content: right;
     margin-bottom: 10px;      /* Space between the two toggles */
+    user-select: none;
 }
 
 .mode-label {
