@@ -13,6 +13,17 @@ function toggleMode() {
   }
 }
 
+function toggleMarquee() {
+  const marquee = document.querySelector('.rss-marquee');
+  const toggle = document.getElementById('toggle-marquee');
+
+  if (toggle.checked) {
+    marquee.style.visibility = 'visible';  // Show marquee
+  } else {
+    marquee.style.visibility = 'hidden';   // Hide marquee
+  }
+}
+
 // Function to apply the saved theme on page load
 window.onload = function() {
   const savedTheme = localStorage.getItem("theme");

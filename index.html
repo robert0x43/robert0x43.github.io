@@ -26,9 +26,18 @@ by Rob
 </head>
 
 <body class="light-mode">
-  <div class="toggle-wrapper">
-    <input type="checkbox" class="toggle-input" id="toggle-mode" onclick="toggleMode()">
-    <label for="toggle-mode" class="toggle-label"></label>
+  <div class="toggles-wrapper">
+    <div class="toggle-wrapper">
+      <span class="mode-label">Appearance</span> <!-- Text to the left of the toggle -->
+      <input type="checkbox" class="toggle-input" id="toggle-mode" onclick="toggleMode()">
+      <label for="toggle-mode" class="toggle-label"></label>
+    </div>
+    
+    <div class="toggle-wrapper">
+      <span class="mode-label">Marquee</span>
+      <input type="checkbox" class="toggle-input" id="toggle-marquee" onclick="toggleMarquee()" checked>
+      <label for="toggle-marquee" class="toggle-label"></label>
+    </div>
   </div>
 
   <div class="container">

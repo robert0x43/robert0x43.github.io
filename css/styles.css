@@ -143,11 +143,30 @@ h1 {
 }
 
 /* Toggle Switch Styles */
-.toggle-wrapper {
+.toggles-wrapper {
     position: absolute;
     top: 20px;
     right: 20px;
+    display: flex;
+    flex-direction: column;  /* Stack the toggles vertically */
+    margin-bottom: 20px;      /* Space between the two toggles */
 }
+
+/* Toggle Switch Styles */
+.toggle-wrapper {
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: right;
+    margin-bottom: 10px;      /* Space between the two toggles */
+}
+
+.mode-label {
+    margin-right: 10px; /* Space between the label and the toggle */
+    font-size: 14px;
+    color: var(--primary-alt-bg-color);
+    line-height: 30px;
+  }
 
 .toggle-label {
     display: inline-block;
@@ -212,4 +231,8 @@ body.dark-mode .search-button {
 /* Dark mode search button */
 body.dark-mode .marquee-content {
     color: var(--secondary-text-color);
+}
+
+body.dark-mode .mode-label {
+    color: var(--secondary-alt-bg-color)
 }
