@@ -96,6 +96,35 @@ h1 {
     white-space: nowrap; /* Prevents text wrapping in the button */
 }
 
+/* RSS marquee Wrapper */
+.rss-marquee-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 26px; /* Center the container */
+    box-sizing: border-box; /* Ensure padding is included in the element’s width */
+    overflow: hidden;
+}
+
+/* marquee Content */
+.rss-marquee {
+    min-width: 300px;
+    white-space: nowrap; /* Prevent wrapping of text */
+    animation: scroll-left 10s linear infinite; /* Adjust speed as needed */
+    font-size: 16px; /* Adjust font size */
+    color: var(--primary-text-color);
+}
+
+/* Scrolling Animation */
+@keyframes scroll-left {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
 /* Toggle Switch Styles */
 .toggle-wrapper {
     position: absolute;
@@ -155,10 +184,15 @@ body.dark-mode {
 body.dark-mode .search-bar {
     background-color: var(--dark-search-color);
     color: var(--secondary-text-color);
-  }
+}
   
-  /* Dark mode search button */
-  body.dark-mode .search-button {
+/* Dark mode search button */
+body.dark-mode .search-button {
     background-color: var(--secondary-alt-bg-color);
     color: var(--secondary-text-color);
-  }
+}
+
+/* Dark mode search button */
+body.dark-mode .rss-marquee {
+    color: var(--secondary-text-color);
+}

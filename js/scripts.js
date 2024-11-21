@@ -38,4 +38,27 @@ window.onload = function() {
       searchGoogle();
     }
   });
+
+  const fetchRSS = async () => {
+    const rssURL = "https://rss2json.com/api.json?rss_url=https://www.reddit.com/r/popular/.rss"; // Replace with your RSS feed URL
+    const marquee = document.getElementById("rss-marquee");
+
+    try {
+        const response = await fetch(rssURL);
+        const data = await response.json();
+
+        if (data && data.items) {
+            const items = data.items.map(item => `<span>${item.title}</span>`);
+            marquee.innerHTML = items.join(" | ");
+        } else {
+            marquee.innerHTML = "<span>No feed items available.</span>";
+        }
+    } catch (error) {
+        console.error("Error fetching RSS feed:", error);
+        marquee.innerHTML = "<span>Error loading feed.</span>";
+    }
+};
+
+// Initialize the RSS fetch
+fetchRSS();
   
