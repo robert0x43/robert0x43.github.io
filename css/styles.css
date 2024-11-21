@@ -109,6 +109,7 @@ h1 {
 /* marquee Content */
 .rss-marquee {
     min-width: 300px;
+    height: 20px;
     white-space: nowrap; /* Prevent wrapping of text */
     animation: scroll-left 10s linear infinite; /* Adjust speed as needed */
     font-size: 16px; /* Adjust font size */
