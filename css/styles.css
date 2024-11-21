@@ -120,7 +120,7 @@ h1 {
     display: inline-block;
     white-space: nowrap; /* Prevent wrapping of text */
     font-size: 16px; /* Adjust font size as needed */
-    animation: scroll-left 45s linear infinite; /* The scroll effect */
+    animation: scroll-left 60s linear infinite; /* The scroll effect */
     color: var(--primary-text-color);
 }
 
