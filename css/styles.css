@@ -202,6 +202,6 @@ body.dark-mode .search-button {
 }
 
 /* Dark mode search button */
-body.dark-mode .rss-marquee {
+body.dark-mode .marquee-content {
     color: var(--secondary-text-color);
 }
