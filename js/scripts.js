@@ -60,6 +60,12 @@ window.onload = function() {
             const marqueeContents = marquee.getElementsByClassName("marquee-content");
             marqueeContents[0].innerHTML = marqueeContent;
             marqueeContents[1].innerHTML = marqueeContent;
+
+            // Set the animation to start after content is loaded
+            setTimeout(() => {
+              marqueeContents[0].style.animationPlayState = 'running'; // Start the animation after content is loaded
+              marqueeContents[1].style.animationPlayState = 'running';
+            }, 100); // Small delay to ensure everything is loaded
         } else {
             marquee.innerHTML = "<div class='marquee-content'>No feed items available.</div>";
         }
