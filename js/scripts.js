@@ -56,6 +56,9 @@ window.onload = function() {
                 marqueeContent += `<span>${title}</span> | `;
             }
 
+            // Remove the trailing pipe and space, then set content for both ticker-content divs
+            marqueeContent = marqueeContent.slice(0, -3); // Remove the last separator
+
             // Insert the content into both marquee-content elements
             const marqueeContents = marquee.getElementsByClassName("marquee-content");
             marqueeContents[0].innerHTML = marqueeContent;
