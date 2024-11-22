@@ -97,5 +97,8 @@ window.onload = function() {
 };
 
 // Initialize the RSS fetch
-fetchRSS();
+window.onload = function() {
+  // Your code to run on page load goes here
+  fetchRSS();
+};
   
