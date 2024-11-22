@@ -39,6 +39,8 @@ window.onload = function() {
       document.getElementById("toggle-mode").checked = (savedTheme === "dark");
   }
 
+  fetchRSS();
+  
   const savedMarquee = localStorage.getItem("marquee");
   if (savedMarquee) {
       const marquee = document.querySelector('.rss-marquee');
@@ -94,11 +96,5 @@ window.onload = function() {
         marqueeContents[0].innerHTML = error
         console.error("Error fetching RSS feed:", error);
     }
-};
-
-// Initialize the RSS fetch
-window.onload = function() {
-  // Your code to run on page load goes here
-  fetchRSS();
 };
   
