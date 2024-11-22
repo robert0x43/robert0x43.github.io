@@ -75,7 +75,8 @@ window.onload = function() {
             let marqueeContent = "";
             for (let i = 0; i < items.length; i++) {
                 const title = items[i].title;
-                marqueeContent += `<span>${title}</span> | `;
+                const link = items[i].link;
+                marqueeContent += `<a href=${link} class="marquee-link">${title}</a> | `;
             }
 
             // Insert the content into both marquee-content elements
@@ -88,10 +89,9 @@ window.onload = function() {
               marqueeContents[0].style.animationPlayState = 'running'; // Start the animation after content is loaded
               marqueeContents[1].style.animationPlayState = 'running';
             }, 100); // Small delay to ensure everything is loaded
-        } else {
-            marquee.innerHTML = "<div class='marquee-content'>No feed items available.</div>";
         }
     } catch (error) {
+        marqueeContents[0].innerHTML = error
         console.error("Error fetching RSS feed:", error);
     }
 };

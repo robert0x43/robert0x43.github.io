@@ -132,6 +132,27 @@ h1 {
     min-width: 100%;
 }
 
+a.marquee-link:link
+{
+    color: inherit;
+    text-decoration: none;
+}
+a.marquee-link:visited
+{
+    color: inherit;
+    text-decoration: none;
+}
+a.marquee-link:hover
+{
+    color: inherit;
+    text-decoration: none;
+}
+a.marquee-link:active
+{
+    color: inherit;
+    text-decoration: none;
+}
+
 /* Scrolling Animation */
 @keyframes scroll-left {
     from {
