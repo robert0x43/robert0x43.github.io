@@ -114,8 +114,9 @@ h1 {
     display: flex; /* Allows the input to grow and shrink as needed */
     overflow: hidden;
     user-select: none;
-    height: 20px;
+    height: 30px;
     gap: var(--gap);
+    color: var(--header-color);
 }
 
 /* The actual ticker content that will scroll */
