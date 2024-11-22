@@ -93,8 +93,7 @@ window.onload = function() {
             }, 100); // Small delay to ensure everything is loaded
         }
     } catch (error) {
-        marqueeContents[0].innerHTML = error
-        console.error("Error fetching RSS feed:", error);
+        console.error(error);
     }
 };
   
