@@ -78,7 +78,7 @@ window.onload = function() {
             for (let i = 0; i < items.length; i++) {
                 const title = items[i].title;
                 const link = items[i].link;
-                marqueeContent += `<a href=${link} class="marquee-link">${title}</a> | `;
+                marqueeContent += ` | <a href=${link} class="marquee-link">${title}</a>`;
             }
 
             // Insert the content into both marquee-content elements
