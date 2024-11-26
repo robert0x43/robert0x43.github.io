@@ -1,40 +1,22 @@
-/*
-name	hex	rgba	colorname
-red	#ED001C	RGBA(237, 0, 28, 1)	Cadmium Red
-orangered	#FF4300	RGBA(255, 67, 0, 1)	Orange Red
-orange	#FF8700	RGBA(255, 135, 0, 1)	Dark Orange
-mango	#FFB100	RGBA(255, 177, 0, 1)	UCLA Gold
-lime	#92E234	RGBA(146, 226, 52, 1)	Atlantis
-green	#3BCB56	RGBA(61, 211, 90, 1)	UFO Green
-mint	#00D4BB	RGBA(0, 212, 187, 1)	Robin Egg Blue
-teal	#13B89F	RGBA(19, 184, 159, 1)	Light Sea Green
-blue	#149EF0	RGBA(20, 158, 240, 1)	Dodger Blue
-alien blue	#0077D6	RGBA(0, 119, 214, 1)	True Blue
-pink	#FF63AC	RGBA(255, 99, 172, 1)	Magenta
-purple	#7F4FC4	RGBA(127, 79, 196, 1)	Fuchsia Blue
-gold	#DEBE22	RGBA(222, 190, 34, 1)	Sunflower
-brown	#A16A3E	RGBA(161, 106, 62, 1)	Cape Palliser
-pale grey	#EFEFED	RGBA(239, 239, 237, 1)	White
-grey	#A5A4A4	RGBA(165, 164, 164, 1)	Gray Chateau
-dark grey	#545452	RGBA(84, 84, 82, 1)	Dark Gray
-semi black	#222222	RGBA(34, 34, 34, 1)	Black
-*/
-
+/* Define Color Variables for Light and Dark Mode */
 :root {
-    --primary-bg-color: #EFEFED; /* Light mode background color */
-    --primary-alt-bg-color: #A5A4A4;
-    --primary-text-color: #222222;  /* Light mode text color */
+    /* Light Mode Colors */
+    --primary-bg-color: #EFEFED; /* Background color for light mode */
+    --primary-alt-bg-color: #A5A4A4; /* Alternate background color for light mode */
+    --primary-text-color: #222222;  /* Text color for light mode */
 
-    --secondary-bg-color: #222222;   /* Dark mode background color */
-    --secondary-alt-bg-color: #545452;
-    --secondary-text-color: #f5f5f5; /* Dark mode text color */
+    /* Dark Mode Colors */
+    --secondary-bg-color: #222222;   /* Background color for dark mode */
+    --secondary-alt-bg-color: #545452; /* Alternate background color for dark mode */
+    --secondary-text-color: #f5f5f5; /* Text color for dark mode */
 
+    /* Header and Search Bar Colors */
     --header-color: #ff5700;        /* Header color */
-    --light-search-color: #f8f8f6;
-    --dark-search-color: #2a2a2a;
-  }
+    --light-search-color: #f8f8f6;  /* Light mode search bar background */
+    --dark-search-color: #2a2a2a;   /* Dark mode search bar background */
+}
 
-/* Basic reset and styling */
+/* Basic Reset for Consistent Layout Across Browsers */
 * {
     font-family: 'Reddit Sans', sans-serif;
     margin: 0;
@@ -42,28 +24,31 @@ semi black	#222222	RGBA(34, 34, 34, 1)	Black
     box-sizing: border-box;
 }
 
+/* Body Styles - Flexbox to Center Content */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for mode change */
 }
 
+/* Container that holds the main content */
 .container {
     text-align: center;
     width: 800px;
     min-width: 0;
 }
 
+/* Header Styles */
 h1 {
     font-size: 100px;
     margin-bottom: 20px;
-    user-select: none;
+    user-select: none; /* Prevents text selection */
     color: var(--header-color); /* Header color */
 }
 
-/* Flex container for the search input and button */
+/* Search Input and Button Styles */
 .search-container {
     display: flex;
     align-items: center;
@@ -72,17 +57,16 @@ h1 {
     margin: 0 auto; /* Center the container */
     padding: 0 25px; /* Add padding to the left and right */
     box-sizing: border-box; /* Ensure padding is included in the element’s width */
-  }
+}
 
-/* Make the search bar flexible to adjust based on the button */
 .search-bar {
-    flex: 1; /* Allows the input to grow and shrink as needed */
+    flex: 1; /* Flexible input that adjusts based on button width */
     padding: 10px;
     font-size: 18px;
     border: 0px;
-    border-radius:4px;
-    background-color: var(--light-search-color);
-    color: var(--primary-text-color);
+    border-radius: 4px;
+    background-color: var(--light-search-color); /* Light mode search bar background */
+    color: var(--primary-text-color); /* Text color */
     margin-right: 10px; /* Space between search input and button */
     min-width: 250px;
 }
@@ -93,12 +77,12 @@ h1 {
     border: 0px;
     border-radius: 4px;
     cursor: pointer;
-    background-color: var(--primary-alt-bg-color);
-    color: var(--primary-text-color);
+    background-color: var(--primary-alt-bg-color); /* Button background */
+    color: var(--primary-text-color); /* Button text color */
     white-space: nowrap; /* Prevents text wrapping in the button */
 }
 
-/* RSS marquee Wrapper */
+/* Marquee Styles - For RSS Feed Ticker */
 .rss-marquee-wrapper {
     display: flex;
     align-items: center;
@@ -108,59 +92,50 @@ h1 {
     min-width: 300px;
 }
 
-/* marquee Content */
 .rss-marquee {
-    --gap: 1rem;
-    display: flex; /* Allows the input to grow and shrink as needed */
-    overflow: hidden;
-    user-select: none;
-    height: 30px;
-    gap: var(--gap);
-    color: var(--header-color);
+    --gap: 1rem; /* Gap between marquee items */
+    display: flex; /* Flexbox for scrolling items */
+    overflow: hidden; /* Hide anything outside the marquee */
+    user-select: none; /* Prevents text selection */
+    height: 30px; /* Marquee height */
+    gap: var(--gap); /* Gap between items */
+    color: var(--header-color); /* Text color */
 }
 
-/* The actual ticker content that will scroll */
+/* The ticker content that will scroll */
 .marquee-content {
     flex-shrink: 0;
     display: flex;
-    white-space: nowrap; /* Prevent wrapping of text */
-    font-size: 16px; /* Adjust font size as needed */
-    animation: scroll-left 100s linear infinite; /* The scroll effect */
-    animation-play-state: paused; /* Pause the animation initially */
-    color: var(--primary-text-color);
-    gap: var(--gap);
+    white-space: nowrap; /* Prevents text wrapping */
+    font-size: 16px; /* Font size of marquee content */
+    animation: scroll-left 100s linear infinite; /* Scroll animation */
+    animation-play-state: paused; /* Initially paused */
+    color: var(--primary-text-color); /* Text color */
+    gap: var(--gap); /* Gap between items */
     justify-content: space-around;
     min-width: 100%;
 }
 
-a.marquee-link:link
-{
+/* Marquee Link Styles */
+a.marquee-link:link,
+a.marquee-link:visited {
     color: inherit;
-    text-decoration: none;
-}
-a.marquee-link:visited
-{
-    color: inherit;
-    text-decoration: none;
-}
-a.marquee-link:hover
-{
-    color: inherit;
-    text-decoration: none;
-}
-a.marquee-link:active
-{
-    color: inherit;
-    text-decoration: none;
+    text-decoration: none; /* No underline */
 }
 
-/* Scrolling Animation */
+a.marquee-link:hover,
+a.marquee-link:active {
+    color: inherit;
+    text-decoration: none; /* No underline on hover */
+}
+
+/* Scroll Animation */
 @keyframes scroll-left {
     from {
-        transform: translateX(0);
+        transform: translateX(0); /* Start at 0 */
     }
     to {
-        transform: translateX(calc(-100% - var(--gap)));
+        transform: translateX(calc(-100% - var(--gap))); /* Move to the left */
     }
 }
 
@@ -174,88 +149,97 @@ a.marquee-link:active
     margin-bottom: 20px;      /* Space between the two toggles */
 }
 
-/* Toggle Switch Styles */
+/* Toggle Wrapper - Holds label and input */
 .toggle-wrapper {
-    top: 20px;
-    right: 20px;
     display: flex;
     justify-content: right;
-    margin-bottom: 10px;      /* Space between the two toggles */
-    user-select: none;
+    margin-bottom: 10px;      /* Space between toggles */
+    user-select: none; /* Prevents selection */
 }
 
+/* Label for the Mode Toggle */
 .mode-label {
     margin-right: 10px; /* Space between the label and the toggle */
     font-size: 14px;
-    color: var(--primary-alt-bg-color);
-    line-height: 30px;
-  }
+    color: var(--primary-alt-bg-color); /* Label color */
+    line-height: 30px; /* Vertically center text */
+}
 
+/* Styles for the Toggle Switch */
 .toggle-label {
     display: inline-block;
     width: 60px;
     height: 30px;
-    background-color: var(--primary-alt-bg-color);
+    background-color: var(--primary-alt-bg-color); /* Background color of the toggle */
     border-radius: 30px;
     position: relative;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; /* Smooth transition */
 }
 
+/* Handle for the Toggle Switch */
 .toggle-label::after {
     content: '';
     width: 26px;
     height: 26px;
-    background-color: var(--light-search-color);
+    background-color: var(--light-search-color); /* Toggle handle color */
     border-radius: 50%;
     position: absolute;
     top: 2px;
     left: 2px;
-    transition: transform 0.3s;
+    transition: transform 0.3s; /* Smooth slide transition */
 }
 
-/* Dark mode activated */
+/* Dark Mode Toggle - Activated */
 input[type="checkbox"]:checked + .toggle-label {
-    background-color: var(--secondary-alt-bg-color);
+    background-color: var(--secondary-alt-bg-color); /* Dark mode toggle background */
 }
 
 input[type="checkbox"]:checked + .toggle-label::after {
-    transform: translateX(30px);
+    transform: translateX(30px); /* Slide handle to the right */
 }
 
-/* Hide the checkbox */
+/* Hide the Checkbox */
 .toggle-input {
     display: none;
 }
 
-/* Light and dark mode styles */
+/* Light Mode Styles */
 body.light-mode {
-    background-color: var(--primary-bg-color);
-    color: var(--secondary-bg-color);
+    background-color: var(--primary-bg-color); /* Light mode background */
+    color: var(--secondary-bg-color); /* Light mode text color */
 }
 
+/* Dark Mode Styles */
 body.dark-mode {
-    background-color: var(--secondary-bg-color);
-    color: var(--primary-bg-color);
+    background-color: var(--secondary-bg-color); /* Dark mode background */
+    color: var(--primary-bg-color); /* Dark mode text color */
 }
 
-/* Dark mode search bar */
+/* Light Mode Search Bar */
+body.light-mode .search-bar {
+    background-color: var(--light-search-color); /* Light mode background */
+    color: var(--primary-text-color); /* Light mode text color */
+}
+
+/* Dark Mode Search Bar */
 body.dark-mode .search-bar {
-    background-color: var(--dark-search-color);
-    color: var(--secondary-text-color);
+    background-color: var(--dark-search-color); /* Dark mode background */
+    color: var(--secondary-text-color); /* Dark mode text color */
 }
-  
-/* Dark mode search button */
+
+/* Dark Mode Search Button */
 body.dark-mode .search-button {
-    background-color: var(--secondary-alt-bg-color);
-    color: var(--secondary-text-color);
+    background-color: var(--secondary-alt-bg-color); /* Dark mode button background */
+    color: var(--secondary-text-color); /* Dark mode button text color */
 }
 
-/* Dark mode search button */
+/* Dark Mode Marquee Text */
 body.dark-mode .marquee-content {
-    color: var(--secondary-text-color);
+    color: var(--secondary-text-color); /* Dark mode marquee text color */
 }
 
+/* Dark Mode Mode Label */
 body.dark-mode .mode-label {
-    color: var(--secondary-alt-bg-color)
+    color: var(--secondary-alt-bg-color); /* Dark mode label color */
 }
