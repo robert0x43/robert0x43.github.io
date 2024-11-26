@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 
 <!--
-                       _      _    
-                      | |    (_)   _   
- ___   ___  _ ___ ____| |__   _  _| |_ 
-/ __/ / _ \| '__// __/| '_ \ | ||_   _|
-\__ \|  __/| |  | (__ | | | || |  | |_ 
+  ___   ___  _ ___ ____| |__   _  _| |_ 
+ / __/ / _ \| '__// __/| '_ \ | ||_   _|
+ \__ \|  __/| |  | (__ | | | || |  | |_ 
 /___/ \___\|_|   \___\|_| |_||_|   \__\
 by Rob
 -->
@@ -16,36 +14,53 @@ by Rob
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>serchit</title>
+
+  <!-- Meta Tags for SEO -->
   <meta name="description" content="Can't find the results you're looking for? serchit instead!">
   <meta name="keywords" content="search, reddit, serchit, find">
+
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="light-mode">
+
+  <!-- Toggles for appearance and marquee visibility -->
   <div class="toggles-wrapper">
+    <!-- Appearance Toggle -->
     <div class="toggle-wrapper">
-      <span class="mode-label">Appearance</span> <!-- Text to the left of the toggle -->
+      <span class="mode-label">Appearance</span> <!-- Text for appearance toggle -->
       <input type="checkbox" class="toggle-input" id="toggle-mode" onclick="toggleMode()">
       <label for="toggle-mode" class="toggle-label"></label>
     </div>
     
+    <!-- Marquee Toggle -->
     <div class="toggle-wrapper">
-      <span class="mode-label">Marquee</span>
+      <span class="mode-label">Marquee</span> <!-- Text for marquee toggle -->
       <input type="checkbox" class="toggle-input" id="toggle-marquee" onclick="toggleMarquee()" checked>
       <label for="toggle-marquee" class="toggle-label"></label>
     </div>
   </div>
 
+  <!-- Main Content -->
   <div class="container">
     <h1>serchit</h1>
+
+    <!-- Search bar and button -->
     <div class="search-container">
       <input class="search-bar" type="text" placeholder="What are you looking for?">
       <button class="search-button" onclick="searchGoogle()">Find</button>
     </div>
+
+    <!-- RSS Marquee -->
     <div class="rss-marquee-wrapper">
       <div class="rss-marquee" id="rss-marquee">
         <div class="marquee-content"></div>
@@ -54,7 +69,9 @@ by Rob
     </div>
   </div>
 
+  <!-- Link to external JavaScript -->
   <script src="js/scripts.js"></script>
+
 </body>
 
 </html>
